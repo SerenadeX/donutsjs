@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="donuts">
+    <head>
+        <meta charset="utf-8">
+        <title>donuts</title>
+
+        <!-- build:css app.css -->
+        <link rel="stylesheet" href="build/app.css">
+        <!-- endbuild -->
+
+        <base href="/">
+    </head>
+    <body>
+        <ul class="menu">
+            <li><a href="/users">users</a></li>
+            <li><a href="/version">version</a></li>
+        </ul>
+
+        <h1>Welcome to donuts</h1>
+        <p>This is the example project to show off the suggested structure for angular applications. Based on <a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">Google's own recommendations</a>, this will make troubleshooting easier and your project's code structure clearer to the world.</p>
+
+        <div ng-view></div>
+        <div>OpenWebStack Structure: v<span app-version></span></div>
+
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular-route/angular-route.min.js"></script>
+        <script src="lib/angular-resource/angular-resource.min.js"></script>
+        <script src="lib/angular-mocks/angular-mocks.js"></script>
+        <script src="lib/spring-security-csrf-token-interceptor/src/spring-security-csrf-token-interceptor.js"></script>
+        <!-- build:js app.js -->
+        <script src="app.js"></script>
+        <script src="components/users/users-controller.js"></script>
+        <script src="components/users/users-service.js"></script>
+        <script src="components/version/version-controller.js"></script>
+        <script src="components/version/version-directive.js"></script>
+        <script src="components/version/version-filter.js"></script>
+        <script src="components/version/version-service.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<h1>Users</h1>
+<!-- Lots of nifty things happening here. We are:
+  - creating an <input/> for every person in the user array
+  - binding each <input/> value to the user's name
+  - conditionally applying the ".awesome" css class if user.awesome is set to true (which happens after save to server).
+  - calling saveAll() in our controller when the button is clicked, which then updates all the users on the server
+-->
+<div class="users">
+  <ul>
+    <li ng-repeat="user in users">
+      <input ng-model="user.name" ng-class="{awesome : user.awesome}" />
+    </li>
+  </ul>
+  <button ng-click="saveAll()">Save Changes</button>
+</div>
+<hr/>
